@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:medicalapp/constants/constants.dart';
 import 'package:medicalapp/model/contrastMode.dart';
+import 'package:medicalapp/screens/reminder/sleep_schedule_view.dart';
 import 'package:medicalapp/utils/appBar_utils.dart';
 import 'package:provider/provider.dart';
 
@@ -60,8 +61,19 @@ class _DashboardPageState extends State<DashboardPage> {
                 mainAxisSpacing: 24,
               ),
               itemBuilder: (context, index) {
-                return CategoryCard(
-                  category: categoryList[index],
+                return GestureDetector(
+                  onTap: () {
+                    // Navigate to the detail page when a card is tapped
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SleepScheduleView(),
+                      ),
+                    );
+                  },
+                  child: CategoryCard(
+                    category: categoryList[index],
+                  ),
                 );
               },
               itemCount: categoryList.length,
@@ -83,7 +95,7 @@ class ResponsiveContainer extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
       ),
       constraints: BoxConstraints(
-        minHeight: 150.0, // Set the minimum height here
+        minHeight: 100.0, // Set the minimum height here
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,

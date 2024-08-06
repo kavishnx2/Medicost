@@ -28,7 +28,7 @@ List<Category> categoryList = [
     thumbnail: 'assets/images/addbills.png',
   ),
   Category(
-    name: 'REMINDER',
+    name: 'MED ALERT',
     thumbnail: 'assets/images/viewbills.png',
   ),
   Category(

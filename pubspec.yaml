@@ -44,6 +44,9 @@ dependencies:
   speech_to_text: ^6.6.2
   avatar_glow: ^3.0.1
   google_fonts: ^4.0.4
+  animated_toggle_switch: ^0.6.2
+  calendar_agenda:
+    path: dev_lib/calendar_agenda/
 
 
 dev_dependencies:
